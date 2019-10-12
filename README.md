@@ -12,6 +12,7 @@ Deposit parameters and calculation result stored in the database
 Deposit data model: - name, interest rate, capitalization period, validity period (from - to)
 Calculation data model: - amount, calculation date, deposit, interest calculation algorithm, profit
 REST endpoints:
+
 ● GET api / investments - list of available deposits
   ○ entrance: none
   ○ output: header: 200, body: deposit list with data narrowed down to id and
