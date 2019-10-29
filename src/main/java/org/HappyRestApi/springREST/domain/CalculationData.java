@@ -23,4 +23,16 @@ public class CalculationData {
     @OneToOne(cascade = {CascadeType.MERGE})
     private BankDeposit bankDeposit;
 
+    public CalculationData parce(){
+
+        if(this.calculationDate == null){
+
+            this.calculationDate = new Date();
+
+            if(this.bankDeposit.getPeriodOfValidityStart() == null){
+                this.bankDeposit.parce();
+            }
+        }
+        return this;
+    }
 }

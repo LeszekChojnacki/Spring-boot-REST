@@ -4,7 +4,7 @@ import org.HappyRestApi.springREST.domain.enums.AlgorithmType;
 
 public class CalculationGatewayFactory {
 
-    public CalculationGateway createCalculationGateway (AlgorithmType algorithmType) {
+    protected CalculationGateway createCalculationGateway (AlgorithmType algorithmType) {
 
         CalculationGateway calculationGateway = null;
 

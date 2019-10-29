@@ -1,6 +1,5 @@
 package org.HappyRestApi.springREST.model;
 
-import org.HappyRestApi.springREST.domain.BankDeposit;
 import org.HappyRestApi.springREST.domain.CalculationData;
 
 public class DailyAlgorithm implements CalculationGateway {
@@ -11,7 +10,7 @@ public class DailyAlgorithm implements CalculationGateway {
         double amount = calculationData.getAmount();
         double interest = calculationData.getBankDeposit().getInterest();
         int period = calculationData.getBankDeposit().getCapitalizationPeriod().getValue();
-        double profit = amount*interest*period*3/36;
+        double profit = Math.round(10.0*amount*interest*period*3/36)/10.0;
 
         calculationData.setProfit(profit);
     }
